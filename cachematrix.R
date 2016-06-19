@@ -25,6 +25,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## The below function checks first to see if a cached copy of the inverse matrix
 ## is available. if one is found that is retuned else the solve function is called
 ## to obtain the inverse  matrix and then it's cached
+## Note: Rather than checking if the cached inverse matrix is null, I am using the 
+## identical function to identify if cached copy of the inverse matrix is available
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
